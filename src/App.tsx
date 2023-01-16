@@ -1,11 +1,17 @@
 import { useState } from "react";
 
-import { Menu } from "@headlessui/react";
-
 function App() {
   const [count, setCount] = useState(0);
 
-  return <div className=" bg-blue-700">asdasdasd</div>;
+  const user = "Phoenix";
+
+  return (
+    <div className=" bg-blue-700">
+      <div className="text-white font-extrabold bg-gray-500 flex justify-center items-center hover:text-green-400 hover:scale-95">
+        {user}
+      </div>
+    </div>
+  );
 }
 
 export default App;
