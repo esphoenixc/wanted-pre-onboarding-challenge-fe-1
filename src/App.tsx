@@ -2,7 +2,8 @@ import React, { useState, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Home = React.lazy(() => import("@/pages/Home"));
-const Login = React.lazy(() => import("@/pages/Login"));
+const SignIn = React.lazy(() => import("@/pages/SignIn"));
+const SignUp = React.lazy(() => import("@/pages/SignUp"));
 const NotFound = React.lazy(() => import("@/pages/NotFound"));
 const Header = React.lazy(() => import("@/pages/Header"));
 
@@ -15,7 +16,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/auth/signin" element={<SignIn />} />
+          <Route path="/auth/signup" element={<SignUp />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
